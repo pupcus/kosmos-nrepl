@@ -2,9 +2,9 @@
 
   :description "simple nrepl server component"
 
-  :url "https://bitbucket.org/pupcus/kosmos-web"
+  :url "https://bitbucket.org/pupcus/kosmos-nrepl"
 
-  :scm {:url "git@bitbucket.org:bitbucket/kosmos-web"}
+  :scm {:url "git@bitbucket.org:bitbucket/kosmos-nrepl"}
 
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}

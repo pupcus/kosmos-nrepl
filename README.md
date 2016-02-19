@@ -18,7 +18,4 @@ connect to your repl however you want (i.e. `M-x cider-connect`, `lein repl :con
 
 ## License
 
-Copyright © 2016 pupcus.org
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Kosmos is distributed under the [Eclipse Public License](http://opensource.org/licenses/eclipse-1.0.php), the same as Clojure.

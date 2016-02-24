@@ -4,13 +4,13 @@ A system component to easily add a nrepl to your application
 
 ## Usage
 
-add something like this to your kosmos .edn files:
+add something like this to your kosmos .edn files (the port can vary according to your needs):
 
 ```
 :nrepl
 {
-:kosmos/type :kosmos.nrepl/NreplComponent
-:port 5001 ;; or some other port number
+:kosmos/init :kosmos.nrepl/NreplComponent
+:port        5001
 }
 ```
 

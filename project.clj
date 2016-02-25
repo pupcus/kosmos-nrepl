@@ -18,8 +18,8 @@
 
   :deploy-repositories [["snapshots"
                          {:url "https://clojars.org/repo"
-                          :creds false}]
+                          :creds :gpg}]
                         ["releases"
                          {:url "https://clojars.org/repo"
-                          :creds false}]])
+                          :creds :gpg}]])
 

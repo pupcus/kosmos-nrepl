@@ -9,7 +9,7 @@
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
-  :dependencies [[kosmos "0.0.3"]
+  :dependencies [[kosmos "0.0.6"]
                  [org.clojure/tools.nrepl "0.2.12"]]
 
   :profiles {:dev  {:resource-paths ["dev-resources"]

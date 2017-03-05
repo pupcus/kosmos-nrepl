@@ -2,6 +2,8 @@
 
 A system component to easily add a nrepl to your application
 
+[![Clojars Project](https://img.shields.io/clojars/v/kosmos/kosmos-nrepl.svg)](https://clojars.org/kosmos/kosmos-nrepl)
+
 ## Usage
 
 add something like this to your kosmos .edn files (the port can vary according to your needs):

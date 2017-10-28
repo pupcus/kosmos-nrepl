@@ -1,4 +1,4 @@
-(defproject kosmos/kosmos-nrepl "0.0.3-SNAPSHOT"
+(defproject kosmos/kosmos-nrepl "0.0.3"
 
   :description "simple nrepl server component"
 

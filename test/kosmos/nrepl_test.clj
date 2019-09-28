@@ -1,6 +1,6 @@
 (ns kosmos.nrepl-test
   (:require [clojure.test :refer :all]
-            [clojure.tools.nrepl :as repl]
+            [nrepl.core :as repl]
             [kosmos :refer [map->system start! stop! system]]
             [kosmos.nrepl :refer :all]))
 
@@ -21,9 +21,8 @@
 (deftest test-nrepl-component
   (let [port (get-in system [:nrepl :port])
         answer (with-open [conn (repl/connect :port port)]
-                 (-> (repl/client conn 1000)    ; message receive timeout required
-                     (repl/message {:op "eval" :code "(+ 1 1)"})
+                 (is conn)
+                 (-> (repl/client conn 2000) ; message receive timeout required
+                     (repl/message {:op :eval :code "(+ 1 1)"})
                      repl/response-values))]
     (is (= answer [2]))))
-
-

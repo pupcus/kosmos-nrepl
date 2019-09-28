@@ -1,6 +1,6 @@
 (ns kosmos.nrepl
   (:require [clojure.tools.logging :as log]
-            [clojure.tools.nrepl.server :as nrepl]
+            [nrepl.server :as nrepl]
             [com.stuartsierra.component :as component]
             [kosmos.util :as u])
 
@@ -47,6 +47,7 @@
           ss (:server-socket server)
           host (.getInetAddress ^ServerSocket ss)
           port (.getLocalPort ^ServerSocket ss)]
+      (log/info "nRepl server =" server)
       (log/info "nREPL started and available at" (str host ":" port))
       (-> component
           (assoc :conn server)

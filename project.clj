@@ -1,4 +1,4 @@
-(defproject kosmos/kosmos-nrepl "0.0.5-SNAPSHOT"
+(defproject kosmos/kosmos-nrepl "0.0.7-SNAPSHOT"
 
   :description "simple nrepl server component"
 
@@ -9,23 +9,17 @@
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
-  :dependencies [[kosmos "0.0.7"]
-                 [org.clojure/tools.nrepl "0.2.13"]]
+  :dependencies [[kosmos "0.0.10"]
+                 [nrepl "0.6.0"]]
 
   :profiles {:dev {:resource-paths ["dev-resources"]
-                   :dependencies [[cider/cider-nrepl "0.15.1"]
-                                  [refactor-nrepl "2.3.1"]
-                                  [org.clojure/clojure "1.8.0"]
+                   :dependencies [[cider/cider-nrepl "0.22.3"]
+                                  [refactor-nrepl "2.5.0-SNAPSHOT"]
+                                  [org.clojure/clojure "1.10.1"]
                                   [org.slf4j/slf4j-log4j12 "1.7.25"]]}}
 
-  :deploy-repositories [["snapshots"
-                         {:url "https://clojars.org/repo"
-                          :sign-releases false
-                          :creds :gpg}]
-                        ["releases"
-                         {:url "https://clojars.org/repo"
-                          :sign-releases false
-                          :creds :gpg}]]
+  :deploy-repositories {"releases" {:url "https://repo.clojars.org" :creds :gpg :sign-releases false}
+                        "snapshots" {:url "https://repo.clojars.org" :creds :gpg :sign-releases false}}
 
   :release-tasks [["vcs" "assert-committed"]
                   ["change" "version" "leiningen.release/bump-version" "release"]

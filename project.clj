@@ -9,12 +9,14 @@
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
-  :dependencies [[kosmos "0.0.11"]
-                 [nrepl "0.6.0"]]
+  :signing {:gpg-key "FCA46A30FEEE7E10"}
+
+  :dependencies [[kosmos "0.0.12"]
+                 [nrepl "0.8.3"]]
 
   :profiles {:dev {:resource-paths ["dev-resources"]
-                   :dependencies [[cider/cider-nrepl "0.24.0"]
-                                  [refactor-nrepl "2.5.0-SNAPSHOT"]
+                   :dependencies [[cider/cider-nrepl "0.25.6"]
+                                  [refactor-nrepl "2.5.0"]
                                   [org.clojure/clojure "1.10.1"]
                                   [org.slf4j/slf4j-log4j12 "1.7.30"]]}}
 
@@ -32,4 +34,3 @@
 
   :global-vars {*warn-on-reflection* true
                 *assert* false})
-

@@ -11,14 +11,14 @@
 
   :signing {:gpg-key "FCA46A30FEEE7E10"}
 
-  :dependencies [[kosmos "0.0.12"]
+  :dependencies [[kosmos "0.0.13"]
                  [nrepl "0.8.3"]]
 
   :profiles {:dev {:resource-paths ["dev-resources"]
-                   :dependencies [[cider/cider-nrepl "0.25.6"]
-                                  [refactor-nrepl "2.5.0"]
-                                  [org.clojure/clojure "1.10.1"]
-                                  [org.slf4j/slf4j-log4j12 "1.7.30"]]}}
+                   :dependencies [[cider/cider-nrepl "0.27.2"]
+                                  [refactor-nrepl "3.1.0"]
+                                  [org.clojure/clojure "1.10.3"]
+                                  [org.slf4j/slf4j-log4j12 "1.7.32"]]}}
 
   :deploy-repositories {"releases" {:url "https://clojars.org/repo" :creds :gpg :sign-releases false}
                         "snapshots" {:url "https://clojars.org/repo" :creds :gpg :sign-releases false}}

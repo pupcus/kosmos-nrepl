@@ -39,3 +39,9 @@ version:
 tag: VERSION:=$(shell cat .version)
 tag:
 	git tag -a ${VERSION} -m "release/tag version v${VERSION}"
+
+build: clean deps
+	@${CLOJURE} -T:build:deploy build/jar
+
+deploy: build
+	@${CLOJURE} -T:build:deploy build/deploy
